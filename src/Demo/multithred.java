@@ -11,15 +11,16 @@ class print
 		System.out.println("Thread Started Printing");
 	for(int i=k;i<=m;i++){
 		
-		System.out.println(i);
-		try{
-			Thread.sleep(100);
-			}
-		catch(Exception e){
-			e.printStackTrace();
-		}
+		System.out.print(i+"\t");
+//		try{
+//			Thread.sleep(100);
+//			}
+//		catch(Exception e){
+//			e.printStackTrace();
+//		}
 		
-	}System.out.println("Thread completed Printing");
+	}System.out.println();
+	System.out.println("Thread completed Printing");
 }
 }
 
@@ -52,9 +53,9 @@ public class multithred{
 	public static void main(String args[])
 	{
 	print p1=new print(1);
-	print p2=new print(11);
-	thread t1=new thread(p1,10);
-	thread t2=new thread(p2,20);
+	print p2=new print(501);
+	thread t1=new thread(p1,500);
+	thread t2=new thread(p2,1000);
 	t1.run();
 	t2.run();
 	
